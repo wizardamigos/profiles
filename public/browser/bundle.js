@@ -1,16 +1,21 @@
 var config = location.href.split('/').filter(function(x,i,arr) { return (i !== arr.length-1) }).join('/') + '/config.json'
-
-ajax(config, function (data) {
-  data = JSON.parse(data)
-  var container = document.createElement('div')
-  container.setAttribute('id','container')
-  container.innerHTML = `
-    <h1>welcome ${data.username} :-)</h1>
-    <xmp>
-      ${JSON.stringify(data, null, 2)}
-    </xmp>
-  `
-  document.body.appendChild(container)
+var peers = 'https://api.github.com/repos/wizardamigosinstitute/peer-wizardamigosinstitute/forks'
+ajax(peers, function (users) {
+  users = JSON.parse(users).map(function (user) { return user.owner.login })
+  ajax(config, function (data) {
+    data = JSON.parse(data)
+    var container = document.createElement('div')
+    container.setAttribute('id','container')
+    container.innerHTML = `
+      <h1>welcome ${data.username} :-)</h1>
+      <iframe frameborder="0" src="https://gitter.im/${data.username}/~embed"></iframe>
+      <div class="peers">
+        <h1> Other peers </h1>
+        ${users.map(function (user) { return `<div><a href="http://github.com/${user}">${user}</a></div>` })}
+      </div>
+    `
+    document.body.appendChild(container)
+  })
 })
 
 /******************************************************************************
