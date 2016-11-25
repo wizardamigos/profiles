@@ -5,9 +5,9 @@
   </head>
   <body>
     <script>
-      var config = 'https://raw.githubusercontent.com/wizardamigosinstitute/peer-wizardamigosinstitute/master/public/browser/bundle.js'
+      var source = 'https://raw.githubusercontent.com/wizardamigosinstitute/peer-wizardamigosinstitute/master/public/browser/bundle.js'
 
-      ajax(config, function fetchScript (data) {
+      ajax(source, function fetchScript (data) {
         var script = document.createElement('script')
         script.setAttribute('id', 'peer-wizardamigosinstitute')
         script.innerHTML = data
