@@ -5,7 +5,7 @@ ajax(config, function (data) {
   var container = document.createElement('div')
   container.setAttribute('id','container')
   container.innerHTML = `
-    <h1>welcome ${data.user} :-)</h1>
+    <h1>welcome ${data.username} :-)</h1>
     <xmp>
       ${JSON.stringify(data, null, 2)}
     </xmp>
