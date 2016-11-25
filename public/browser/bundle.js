@@ -1,7 +1,7 @@
 var config = location.href.split('/').filter(function(x,i,arr) { return (i !== arr.length-1) }).join('/') + '/config.json'
 
 ajax(config, function (data) {
-  data = JSON.stringify(data)
+  data = JSON.parse(data)
   document.body.innerHTML = `
     <h1>welcome ${data.user} :-)</h1>
     <xmp>
