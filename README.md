@@ -1,4 +1,4 @@
-# wizardamigo
+# peer-wizardamigosinstitute
 **work in progress** - Wizard Amigo Profile Page Template
 
 ## idea
