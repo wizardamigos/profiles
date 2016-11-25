@@ -1,4 +1,4 @@
-var config = location.href.split('/').pop().join('/') + '/config.json'
+location.href.split('/').filter(function(x,i,arr) { return (i !== arr.length-1) }).join('/') + '/config.json'
 
 ajax(config, function (data) {
   document.body.innerHTML = `
