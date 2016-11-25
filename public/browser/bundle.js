@@ -1,17 +1,19 @@
 var config = location.href.split('/').filter(function(x,i,arr) { return (i !== arr.length-1) }).join('/') + '/config.json'
 var peers = 'https://api.github.com/repos/wizardamigosinstitute/peer-wizardamigosinstitute/forks'
+
 ajax(peers, function (users) {
   users = JSON.parse(users).map(function (user) { return user.owner.login })
   ajax(config, function (data) {
     data = JSON.parse(data)
+    var chat = location.hostname === 'wizardamigos.com' ? 'wizardamigosinstitute/chat' : data.username
     var container = document.createElement('div')
     container.setAttribute('id','container')
     container.innerHTML = `
       <h1>welcome ${data.username} :-)</h1>
-      <iframe frameborder="0" src="https://gitter.im/${data.username}/~embed"></iframe>
+      <iframe frameborder="0" src="https://gitter.im/${chat}/~embed"></iframe>
       <div class="peers">
         <h1> Other peers </h1>
-        ${users.map(function (user) { return `<div><a href="http://github.com/${user}">${user}</a></div>` })}
+        ${users.map(function (user) { return `<div><a href="http://github.com/${user}">${user}</a></div>` }).join('')}
       </div>
     `
     document.body.appendChild(container)
