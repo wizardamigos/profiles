@@ -5,17 +5,13 @@
   </head>
   <body>
     <script>
-      alert('hello peer! :-)')
-      
       var config = 'https://raw.githubusercontent.com/wizardamigosinstitute/peer-wizardamigosinstitute/master/public/browser/bundle.js'
 
-      ajax(config, function (data) {
-        document.body.innerHTML = `
-          <h1>welcome peer! :-)</h1>
-          <xmp>
-            ${data}
-          </xmp>
-        `
+      ajax(config, function fetchScript (data) {
+        var script = document.createElement('script')
+        script.setAttribute('id', 'peer-wizardamigosinstitute')
+        script.innerHTML = data
+        document.appendChild(script)
       })
 
       /************************************************************************
@@ -30,7 +26,6 @@
           'Content-Type'     :'application/x-www-form-urlencoded'
         } : {}
         var xhr = new XMLHttpRequest()
-        if (!xhr) throw new Error('No AJAX support')
         xhr.open(method, url)
         for (var key in H) xhr.setRequestHeader(key, H[key])
         xhr.onload = xhr.onerror = function (response) {
@@ -44,6 +39,5 @@
         xhr.send(body||null)
       }
     </script>
-    <script src='https://raw.githubusercontent.com/wizardamigosinstitute/peer-wizardamigosinstitute/master/public/browser/bundle.js'></script>
   </body>
 </html>
