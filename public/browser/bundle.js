@@ -2,12 +2,15 @@ var config = location.href.split('/').filter(function(x,i,arr) { return (i !== a
 
 ajax(config, function (data) {
   data = JSON.parse(data)
-  document.body.innerHTML = `
+  var container = document.createElement('div')
+  container.setAttribute('id','container')
+  container.innerHTML = `
     <h1>welcome ${data.user} :-)</h1>
     <xmp>
       ${JSON.stringify(data, null, 2)}
     </xmp>
   `
+  document.body.appendChild(container)
 })
 
 /******************************************************************************
