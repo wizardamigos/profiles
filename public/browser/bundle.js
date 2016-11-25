@@ -1,8 +1,16 @@
 var config = location.href.split('/').filter(function(x,i,arr) { return (i !== arr.length-1) }).join('/') + '/config.json'
 var peers = 'https://api.github.com/repos/wizardamigosinstitute/peer-wizardamigosinstitute/forks'
 
+
 ajax(peers, function (users) {
   users = JSON.parse(users).map(function (user) { return user.owner.login })
+  var length = users.length
+  // users.forEach(function (user) {
+  // ajax(`http://github.com/${full_name}
+  render(users)  
+})
+function render (users) {
+  if (length) return length--
   ajax(config, function (data) {
     data = JSON.parse(data)
     var chat = location.hostname === 'wizardamigos.com' ? 'wizardamigosinstitute/chat' : data.username
@@ -18,8 +26,7 @@ ajax(peers, function (users) {
     `
     document.body.appendChild(container)
   })
-})
-
+}
 /******************************************************************************
   HELPER
 ******************************************************************************/
