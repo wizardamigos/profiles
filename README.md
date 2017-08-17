@@ -1,12 +1,11 @@
-# peer-wizardamigosinstitute
-peer profile
-
+# profile
+wizardamigos peer profile
 
 
 # usage
 **SignUp** by forking this repository and follow the steps below.
 
-your forked version of **[`peer-wizardamigosinstitute: peer profile`](https://github.com/wizardamigosinstitute/peer-wizardamigosinstitute)** will influence the **[`organization: admin interface`](https://wizardamigosinstitute.github.io/organization)** and **[`service: elearning app`](https://wizardamigosinstitute.github.io/service)**, because those views take into account all forks.
+your forked version of **[`profile: wizardamigos peer profile`](https://github.com/wizardamigosinstitute/peer-wizardamigosinstitute)** will influence the **[`organization: admin interface`](https://wizardamigosinstitute.github.io/organization)** and **[`service: elearning app`](https://wizardamigosinstitute.github.io/service)**, because those views take into account all forks.
 
 1. **click** the **fork** button in the top right corner and select your **github username**
 2. **go to** `settings` on your forked repository version
