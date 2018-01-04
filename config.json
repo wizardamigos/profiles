@@ -1,18 +1,24 @@
 {
-  "username": "wizardamigos",
+  "username": "johndoe91",
+  "name": "John Doe",
   "photo": "https://avatars0.githubusercontent.com/u/12087830?s=200&v=4",
-  "background":"Front-end",
-  "skills-exprience-level":[{
-    "Javascript":"5",
-    "HTML":"6",
-    "CSS":"5",
-    "SASS":"5"
-  }],
+  "projects": [
+    "http://github.com/john91doe/profiles",
+    "http://github.com/john91doe/i-learn-css-flexbox",
+    "http://github.com/john91doe/my-webpage"
+  ],
+  "background":[
+    "A graduate student from NTUT Interaction Design Dept",
+    "Front-end",
+    "Javascript 1 year",
+    "HTML 2 months",
+    "CSS 3 months",
+    "SASS 2 months"
+  ],
   "interests":[
-    {
-      "like-to-work-on":"",
-      "want-to-learn":"",
-      "want-to-work-on":""
-    }
-  ]
+    "JavaScript (how to build web, desktop and mobile apps)",
+    "Remote Gigs/Jobs (forming a local agency/cooperative (as an app)"
+  ],
+  "twitter": "http://twitter.com/johndoe91",
+  "github": "http://github.com/john91doe"
 }
